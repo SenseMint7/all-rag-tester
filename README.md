@@ -24,7 +24,7 @@ $ docker compose up -d
 - http://localhost:8501
 
 ## 테스트 방법
-1. .enf file을 생성하여 줍니다.  
+1. 실행 전 다운받은 폴더에 .env 파일을 생성하여 아래 내용을 넣어 줍니다.  
 OPENAI_API_KEY=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  
 REDIS_HOST=redis  
 REDIS_PORT=6379
