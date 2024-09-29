@@ -24,9 +24,13 @@ $ docker compose up -d
 - http://localhost:8501
 
 ## 테스트 방법
-1. 챗봇으로 만들고 싶은 pdf 파일을 업로드 합니다.
-2. 여러 파일의 pdf 문서기반 챗봇을 만들고 싶으시면 화면의 가이드를 따라주세요.
-3. 모든 pdf 파일을 업로드 후 원하는 질문을 해보세요!
+1. .enf file을 생성하여 줍니다.  
+OPENAI_API_KEY=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  
+REDIS_HOST=redis  
+REDIS_PORT=6379
+2. 챗봇으로 만들고 싶은 pdf 파일을 업로드 합니다.
+3. 여러 파일의 pdf 문서기반 챗봇을 만들고 싶으시면 화면의 가이드를 따라주세요.
+4. 모든 pdf 파일을 업로드 후 원하는 질문을 해보세요!
 
 ### 추가 설명
 - RedisChatMessageHistory 를 사용하여 멀티턴 에이전트를 구현하였습니다.
