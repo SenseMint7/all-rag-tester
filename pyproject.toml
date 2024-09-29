@@ -1,0 +1,45 @@
+[project]
+name = "all-rag-tester"
+version = "1.0.0"
+description = "test the methodology of all RAG"
+authors = [{ name = "PARK SANG DO", email = "shfkstjsanf@gmail.com" }]
+readme = "README.md"
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+lint.select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+lint.ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W191",  # indentation contains tabs
+    "B904",  # Within an `except` clause
+]
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+addopts = "-s -v"
+testpaths = ["tests"]
+python_files = ["*.py"]
+asyncio_mode = "auto"
+filterwarnings = [
+    "error",
+    'ignore::DeprecationWarning:httpx.*:',
+]
+
+[tool.pytest_env]
+APP_ENV = "test"
+
+[tool.uv]
+managed = false
